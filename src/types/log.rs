@@ -21,12 +21,14 @@ pub struct Log {
     pub transaction_hash: Option<H256>,
     /// Transaction Index
     #[serde(rename = "transactionIndex")]
+    #[serde(default)] // Zilliqa field is invalid.
     pub transaction_index: Option<Index>,
     /// Log Index in Block
     #[serde(rename = "logIndex")]
     pub log_index: Option<U256>,
     /// Log Index in Transaction
     #[serde(rename = "transactionLogIndex")]
+    #[serde(default)] // Zilliqa field is invalid.
     pub transaction_log_index: Option<U256>,
     /// Log Type
     #[serde(rename = "logType")]
